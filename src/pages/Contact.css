@@ -1,0 +1,53 @@
+﻿.contact-page {
+  min-height: calc(100vh - 84px);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(14, 122, 136, 0.2), transparent 33%),
+    radial-gradient(circle at 88% 73%, rgba(244, 185, 66, 0.2), transparent 30%),
+    #f4f8fc;
+}
+
+.contact-head {
+  text-align: center;
+  margin-bottom: 1.1rem;
+}
+
+.contact-head h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #0f3047;
+}
+
+.contact-head p {
+  margin-top: 0.5rem;
+  color: #4d6274;
+}
+
+.contact-card-pro {
+  border: 1px solid rgba(11, 40, 62, 0.12);
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 20px 44px rgba(13, 31, 45, 0.12);
+  background: #fff;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.contact-card-pro .form-control {
+  border-radius: 12px;
+  border: 1px solid rgba(13, 31, 45, 0.16);
+}
+
+.contact-card-pro .form-control:focus {
+  border-color: #0e7a88;
+  box-shadow: 0 0 0 0.2rem rgba(14, 122, 136, 0.16);
+}
+
+.contact-submit-btn {
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.72rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0e7a88, #0a5a64);
+}

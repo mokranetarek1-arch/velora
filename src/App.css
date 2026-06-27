@@ -1,0 +1,32 @@
+:root {
+  --velora-green: #1d7d3a;
+  --velora-orange: #f28c2f;
+  --velora-black: #090b0d;
+  --velora-white: #ffffff;
+  --velora-surface: #101317;
+  --velora-muted: #5b6a5f;
+  --velora-bg: #f8fbf6;
+  --velora-card: #ffffff;
+}
+
+body {
+  background: var(--velora-bg);
+  color: var(--velora-black);
+}
+
+.app-main-shell {
+  min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .app-main-shell {
+    margin-left: 92px;
+    width: calc(100% - 92px);
+    transition: margin-left 0.28s ease, width 0.28s ease;
+  }
+
+  body:has(.hd-navbar-side:hover) .app-main-shell {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+  }
+}

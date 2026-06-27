@@ -1,0 +1,60 @@
+﻿.auth-page {
+  min-height: calc(100vh - 84px);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(14, 122, 136, 0.24), transparent 32%),
+    radial-gradient(circle at 90% 76%, rgba(244, 185, 66, 0.2), transparent 30%),
+    #f3f7fc;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.auth-card {
+  width: min(460px, 100%);
+  background: #fff;
+  border: 1px solid rgba(11, 40, 62, 0.12);
+  border-radius: 18px;
+  padding: 1.4rem;
+  box-shadow: 0 24px 52px rgba(13, 31, 45, 0.14);
+}
+
+.auth-card h2 {
+  margin: 0;
+  font-weight: 800;
+  color: #0f3047;
+}
+
+.auth-card p {
+  color: #5a7285;
+  margin-top: 0.45rem;
+  margin-bottom: 1.1rem;
+}
+
+.auth-card .form-control {
+  border-radius: 12px;
+  padding: 0.72rem 0.9rem;
+  border: 1px solid rgba(13, 31, 45, 0.16);
+}
+
+.auth-card .form-control:focus {
+  border-color: #0e7a88;
+  box-shadow: 0 0 0 0.2rem rgba(14, 122, 136, 0.16);
+}
+
+.auth-primary-btn,
+.auth-secondary-btn {
+  border-radius: 999px;
+  border: 0;
+  font-weight: 700;
+  padding: 0.68rem 0.95rem;
+}
+
+.auth-primary-btn {
+  color: #fff;
+  background: linear-gradient(135deg, #0e7a88, #0a5a64);
+}
+
+.auth-secondary-btn {
+  background: #eaf3f9;
+  color: #0f3047;
+}

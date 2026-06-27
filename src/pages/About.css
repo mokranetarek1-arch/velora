@@ -1,0 +1,85 @@
+﻿.about-page {
+  background: #f4f8fc;
+  min-height: calc(100vh - 84px);
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #0b2236, #0e7a88);
+  color: #fff;
+  padding: 4rem 0 3.5rem;
+}
+
+.about-hero h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.about-hero p {
+  margin-top: 0.8rem;
+  max-width: 780px;
+  opacity: 0.92;
+}
+
+.about-content {
+  padding: 2.2rem 0 3rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-card-pro {
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(11, 40, 62, 0.11);
+  padding: 1rem;
+  box-shadow: 0 16px 30px rgba(12, 32, 48, 0.08);
+}
+
+.about-card-pro span {
+  display: inline-block;
+  background: #e8f4fa;
+  color: #0e7a88;
+  padding: 0.36rem 0.72rem;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.about-card-pro h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.about-card-pro p {
+  margin: 0.5rem 0 0;
+  color: #4d6274;
+}
+
+.about-story {
+  background: #fff;
+  margin-top: 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(11, 40, 62, 0.11);
+  padding: 1.1rem;
+  box-shadow: 0 16px 30px rgba(12, 32, 48, 0.08);
+}
+
+.about-story p {
+  margin: 0 0 0.85rem;
+  color: #2f4456;
+  line-height: 1.7;
+}
+
+.about-story p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

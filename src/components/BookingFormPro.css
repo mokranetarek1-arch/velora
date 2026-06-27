@@ -1,0 +1,193 @@
+﻿.booking-card-pro {
+  border: 1px solid rgba(11, 40, 62, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 18px 36px rgba(13, 31, 45, 0.1);
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+.booking-card-pro .form-control {
+  border-radius: 12px;
+  border: 1px solid rgba(13, 31, 45, 0.16);
+  padding: 0.72rem 0.9rem;
+}
+
+.booking-card-pro .form-control:focus {
+  border-color: #0e7a88;
+  box-shadow: 0 0 0 0.2rem rgba(14, 122, 136, 0.18);
+}
+
+.booking-autocomplete {
+  position: relative;
+}
+
+.booking-title {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #0f3047;
+}
+
+.btn-location-pro,
+.btn-submit-pro {
+  border: 0;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.68rem 1rem;
+}
+
+.btn-location-pro {
+  background: #e9f4fa;
+  color: #0f3047;
+}
+
+.booking-suggestions {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: #fff;
+  border: 1px solid rgba(13, 31, 45, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 18px 36px rgba(7, 25, 40, 0.12);
+  overflow: hidden;
+}
+
+.booking-suggestion-item {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  color: #1b3448;
+  text-align: left;
+  padding: 0.8rem 0.95rem;
+}
+
+.booking-suggestion-item + .booking-suggestion-item {
+  border-top: 1px solid rgba(13, 31, 45, 0.08);
+}
+
+.booking-suggestion-item:hover {
+  background: #f3f9fc;
+}
+
+.btn-submit-pro {
+  width: 100%;
+  background: linear-gradient(135deg, #0e7a88, #0a5a64);
+  color: #fff;
+}
+
+.confirm-overlay-pro {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 17, 28, 0.62);
+  display: grid;
+  place-items: center;
+  z-index: 1080;
+  padding: 1rem;
+}
+
+.confirm-modal-pro {
+  width: min(520px, 100%);
+  background: #fff;
+  border-radius: 22px;
+  padding: 1.4rem;
+  box-shadow: 0 22px 46px rgba(7, 25, 40, 0.25);
+}
+
+.confirm-header-pro {
+  margin-bottom: 1rem;
+}
+
+.confirm-header-pro h4 {
+  margin: 0 0 0.35rem;
+  color: #0f3047;
+  font-weight: 800;
+}
+
+.confirm-header-pro p {
+  margin: 0;
+  color: #5f7386;
+}
+
+.confirm-section-pro {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(13, 31, 45, 0.08);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff, #f9fbfd);
+}
+
+.confirm-section-pro h5 {
+  margin: 0 0 0.85rem;
+  color: #0f3047;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.confirm-grid-pro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.confirm-item-pro {
+  padding: 0.8rem 0.9rem;
+  border-radius: 14px;
+  background: #f3f8fb;
+}
+
+.confirm-item-pro span,
+.confirm-summary-item-pro span {
+  display: block;
+  font-size: 0.82rem;
+  color: #6d7f90;
+  margin-bottom: 0.3rem;
+}
+
+.confirm-item-pro strong,
+.confirm-summary-item-pro strong {
+  color: #14384d;
+  line-height: 1.4;
+}
+
+.confirm-item-wide-pro {
+  grid-column: 1 / -1;
+}
+
+.confirm-summary-pro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.confirm-summary-item-pro {
+  padding: 0.95rem 1rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0f3047, #0e7a88);
+  color: #fff;
+}
+
+.confirm-summary-item-pro span,
+.confirm-summary-item-pro strong {
+  color: #fff;
+}
+
+.confirm-actions-pro {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.confirm-actions-pro .btn {
+  flex: 1;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  .confirm-grid-pro,
+  .confirm-summary-pro {
+    grid-template-columns: 1fr;
+  }
+}

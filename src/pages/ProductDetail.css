@@ -1,0 +1,403 @@
+﻿.pd-page {
+  min-height: calc(100vh - 84px);
+  background: linear-gradient(180deg, #f8fbf6, #eef6eb);
+}
+
+.pd-hero {
+  max-width: 880px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.pd-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--velora-black);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pd-back-link:hover {
+  color: var(--velora-green);
+}
+
+.pd-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pd-meta-item {
+  border-radius: 18px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(29, 125, 58, 0.08);
+  color: var(--velora-black);
+}
+
+.pd-meta-item strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--velora-muted);
+  font-size: 0.9rem;
+}
+
+.pd-meta-item span {
+  font-weight: 700;
+}
+
+.pd-placeholder-image {
+  height: 420px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(29, 125, 58, 0.08);
+  color: var(--velora-muted);
+  font-weight: 700;
+}
+
+.pd-hero-badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(242, 140, 47, 0.16);
+  color: var(--velora-orange);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.pd-hero-title {
+  margin: 1rem 0 0.75rem;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 900;
+  color: var(--velora-black);
+}
+
+.pd-hero-text {
+  margin: 0 auto;
+  max-width: 720px;
+  color: var(--velora-muted);
+  line-height: 1.75;
+}
+
+.pd-wrapper {
+  background: var(--velora-white);
+  border-radius: 22px;
+  border: 1px solid rgba(29, 125, 58, 0.12);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem;
+}
+
+.pd-slider-wrap {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(29, 125, 58, 0.06);
+}
+
+.pd-slider-hint {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--velora-black);
+  font-size: 0.85rem;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pd-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--velora-black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.pd-arrow:hover {
+  transform: translateY(-50%) scale(1.05);
+  background: var(--velora-green);
+  color: var(--velora-white);
+}
+
+.pd-arrow-prev {
+  left: 1rem;
+}
+
+.pd-arrow-next {
+  right: 1rem;
+}
+
+.pd-slide,
+.pd-single-image {
+  position: relative;
+  overflow: hidden;
+  height: 420px;
+}
+
+.pd-slide img,
+.pd-single-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+.pd-slide:not(.pd-slide-zoomed) img:hover {
+  transform: scale(1.05);
+}
+
+.pd-slide-zoomed img {
+  transform: scale(2);
+  cursor: move;
+}
+
+.pd-zoom-badge {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--velora-black);
+  font-size: 0.82rem;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pd-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  padding: 1.5rem;
+}
+
+.pd-zoom-content {
+  position: relative;
+  max-width: min(100%, 1200px);
+  width: 100%;
+  max-height: min(100%, 90vh);
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.3);
+}
+
+.pd-zoom-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 90vh;
+}
+
+.pd-zoom-close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--velora-black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.pd-zoom-close:hover {
+  background: var(--velora-green);
+  color: var(--velora-white);
+}
+
+.pd-description {
+  border: 1px solid rgba(29, 125, 58, 0.12);
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.pd-description h5 {
+  margin: 0 0 0.5rem;
+  color: var(--velora-black);
+}
+
+.pd-description p {
+  margin: 0;
+  color: var(--velora-muted);
+}
+
+.pd-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--velora-black);
+}
+
+.pd-price-box {
+  margin: 1rem 0;
+  text-align: center;
+  border-radius: 18px;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, rgba(29, 125, 58, 0.95), rgba(242, 140, 47, 0.95));
+  color: var(--velora-white);
+}
+
+.pd-old-price {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.pd-new-price {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.pd-offer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.pd-highlights {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 1.2rem;
+}
+
+.pd-highlight-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(29, 125, 58, 0.12);
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--velora-black);
+  font-weight: 600;
+}
+
+.pd-highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(29, 125, 58, 0.12);
+  color: var(--velora-green);
+}
+
+.pd-landing-copy {
+  background: rgba(242, 140, 47, 0.08);
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pd-landing-copy h5 {
+  margin: 0 0 0.75rem;
+  color: var(--velora-black);
+}
+
+.pd-landing-copy ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--velora-black);
+  line-height: 1.8;
+}
+
+.pd-landing-copy li {
+  margin-bottom: 0.75rem;
+}
+
+.pd-form .form-control,
+.pd-form .form-select {
+  border-radius: 14px;
+  border: 1px solid rgba(29, 125, 58, 0.16);
+}
+
+.pd-form .form-control:focus,
+.pd-form .form-select:focus {
+  border-color: rgba(29, 125, 58, 0.45);
+  box-shadow: 0 0 0 0.2rem rgba(29, 125, 58, 0.16);
+}
+
+.pd-submit-btn {
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--velora-green), rgba(29, 125, 58, 0.85));
+  color: var(--velora-white);
+  font-weight: 700;
+  padding: 0.95rem 1.8rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  box-shadow: 0 8px 24px rgba(29, 125, 58, 0.28);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.pd-submit-btn:hover {
+  background: linear-gradient(135deg, rgba(29, 125, 58, 0.9), var(--velora-green));
+  box-shadow: 0 12px 32px rgba(29, 125, 58, 0.38);
+  transform: translateY(-2px);
+}
+
+.pd-submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(29, 125, 58, 0.24);
+}
+
+.pd-form .btn-outline-secondary {
+  border-color: rgba(29, 125, 58, 0.3);
+  color: var(--velora-black);
+}
+
+.pd-form .btn-outline-secondary:hover {
+  background: rgba(29, 125, 58, 0.08);
+}
