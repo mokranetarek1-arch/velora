@@ -11,12 +11,12 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
-import IconLogo from "../assets/ICON.png";
 import "./Navbar.css";
 
 export default function AppNavbar() {
   const [expanded, setExpanded] = useState(false);
   const { language, setLanguage } = useContext(LanguageContext);
+  const logoSrc = "/velora.png";
 
   useEffect(() => {
     document.documentElement.dir = language === "AR" ? "rtl" : "ltr";
@@ -36,7 +36,7 @@ export default function AppNavbar() {
     <>
       <Navbar className="hd-navbar-mobile">
         <NavLink to="/" onClick={() => setExpanded(false)} className="hd-brand">
-          <Image src={IconLogo} alt="Velora" height="40" />
+          <Image src={logoSrc} alt="Velora" height="48" />
           <span>Velora</span>
         </NavLink>
 
@@ -49,7 +49,7 @@ export default function AppNavbar() {
 
       <aside className="hd-navbar-side">
         <NavLink to="/" className="hd-brand hd-brand-side">
-          <Image src={IconLogo} alt="Velora" height="44" />
+          <Image src={logoSrc} alt="Velora" height="56" />
           <span>Velora</span>
         </NavLink>
 
